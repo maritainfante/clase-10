@@ -10,6 +10,27 @@
 </head>
 
 <body class="bg-light">
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Fixed navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="page-1.html">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="page-2.html" >Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
     <div class="container py-3">
         <div class="row">
             <header class="col-12 mb-3">
@@ -39,7 +60,7 @@
         var texto = ["Traveling in a fried-out Kombi On a hippie trail", "head full of zombie I met a strange lady", "Can't you hear, can't you hear the thunder? You better run, you better take cover", "Buying bread from a man in Brussels He was six-foot-four and full of muscles", "I said: Do you speak my language? He just smiled and gave me a Vegemite sandwich", "I come from a land down under Where beer does flow and men chunder"];
         // Referencias para lo que sigue https://api.jquery.com/jquery.each/ ({ https://api.jquery.com/append/ })
         $.each( texto, function( i, frase ) {
-            $("#articulos").append("<div class='col-lg-6 col-xl-4 mb-4'><article class='bg-primary text-light p-3 shadow-sm rounded'>"+frase+"</article></div>");
+            $("#articulos").append("<div class='col-lg-4 col-xl-3 mb-2'><article class='bg-warning text-light p-3 shadow-lg rounded'>"+frase+"</article></div>");
         });
         // Lo que sigue aprovecha Bootstrap y jQuery. Afecta a la proporción del video embebido, quitando/poniendo una clase
         $(window).bind("load resize",function() {
